@@ -21,7 +21,7 @@ export default function About() {
       <PageHeader
         eyebrow="About Kasab"
         title="A house built on thread, time, and trust."
-        description="Kasab Embroideries began as a small atelier in Faisalabad and has grown into one of South Asia's most trusted embroidery manufacturers — serving the region's leading fashion houses without losing the craft that started it all."
+        description="Kasab Embroideries began as a small atelier in Lahore and has grown into one of South Asia's most trusted embroidery manufacturers — serving the region's leading fashion houses without losing the craft that started it all."
         breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
       />
 
@@ -36,7 +36,7 @@ export default function About() {
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-ink-700 relative">
               <img
-                src="/images/about/factory-2.jpg"
+                src="/images/image1y.jpeg"
                 alt="Kasab atelier"
                 onError={(e) => { e.currentTarget.style.display = 'none' }}
                 className="w-full h-full object-cover"
@@ -49,22 +49,22 @@ export default function About() {
             <div className="eyebrow mb-4">Our Story</div>
             <h2 className="sub-heading text-white">Built stitch by stitch, over fifteen years.</h2>
             <div className="mt-6 space-y-5 text-ink-200 leading-relaxed">
-              <p>
-                What began with a single embroidery head and a handful of artisans has
-                grown into a multi-floor production facility running 28-head machines
-                around the clock — yet the philosophy hasn't changed: every piece that
-                leaves our floor is treated as couture.
-              </p>
-              <p>
-                We partner with design teams the way a tailor partners with a client —
-                listening first, sampling patiently, and refining until the embellishment
-                is an extension of the garment, not an addition to it.
-              </p>
-              <p>
-                Today, our work lives on the runways of Lahore, the shelves of Karachi,
-                and the wardrobes of brides and collectors around the world.
-              </p>
-            </div>
+  <p>
+    From a single machine to a fully equipped production setup, we have grown into a
+    reliable embroidery service provider with advanced multi-head and sequence machines
+    operating around the clock.
+  </p>
+  <p>
+    We specialize in embroidery on client-supplied fabrics. Whether it's cloth or
+    custom material, our team transforms it into high-quality embroidered products using
+    Aari and modern machine techniques.
+  </p>
+  <p>
+    With a strong focus on craftsmanship, consistency, and on-time delivery, we serve
+    fashion brands, manufacturers, and businesses looking for dependable embroidery
+    solutions.
+  </p>
+</div>
 
             <div className="mt-10 grid grid-cols-2 gap-6">
               {stats.map((s) => (
@@ -119,9 +119,9 @@ export default function About() {
             </p>
             <ul className="mt-8 space-y-4">
               {[
-                'Production capacity: 100,000+ embroidered pieces per month',
+                'High production capacity with multi-head embroidery machines running 24/7',
                 'Sampling turnaround: 48-72 hours on standard artwork',
-                'Fabric handling: silks, chiffons, organzas, denim, knits',
+                'Expert handling of all fabric types including cotton, silk, chiffon, organza, denim, and knitwear',
                 'In-house digitizing, color matching, and QC teams',
               ].map((t) => (
                 <li key={t} className="flex items-start gap-3 text-ink-100">
@@ -142,16 +142,16 @@ export default function About() {
             className="order-1 lg:order-2 grid grid-cols-2 gap-4"
           >
             <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700">
-              <img src="/images/about/capability-1.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+              <img src="/images/laser.jpeg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
             </div>
             <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700 mt-8">
-              <img src="/images/about/capability-2.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+              <img src="/images/sequence.jpeg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
             </div>
             <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700">
-              <img src="/images/about/capability-3.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+              <img src="/images/image1y.jpeg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
             </div>
             <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700 mt-8">
-              <img src="/images/about/capability-4.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+              <img src="/images/laser.jpeg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
             </div>
           </motion.div>
         </div>

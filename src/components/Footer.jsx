@@ -35,11 +35,12 @@ export default function Footer() {
         <div>
           <h4 className="text-white text-sm uppercase tracking-widest mb-5">Services</h4>
           <ul className="space-y-3 text-sm text-ink-200">
-            <li>Aari Embroidery</li>
-            <li>Multi-head Embroidery</li>
-            <li>Sequin Embroidery</li>
-            <li>Double Sequin</li>
-            <li>28-Head Machines</li>
+            <li>Aari </li>
+            <li>Multi-head </li>
+            <li>Single Sequence </li>
+            <li>Double Sequence</li>
+            <li>Laser </li>
+            <li>Aari Sequence </li>
           </ul>
         </div>
 
@@ -48,18 +49,18 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-ink-200">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-gold-400 mt-1 shrink-0" />
-              <span>Faisalabad, Pakistan</span>
+              <span>Lahore, Pakistan</span>
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-gold-400" />
-              <a href="tel:+923000000000" className="hover:text-gold-300">+92 300 000 0000</a>
+              <a href="tel:+923000000000" className="hover:text-gold-300">+92 30 822 25565</a>
             </li>
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-gold-400" />
-              <a href="mailto:info@kasabembroideries.com" className="hover:text-gold-300">info@kasabembroideries.com</a>
+              <a href="mailto:info@kasabembroideries.com" className="hover:text-gold-300">kasabembroideries@gmail.com</a>
             </li>
           </ul>
-          <div className="flex gap-3 mt-5">
+          {/* <div className="flex gap-3 mt-5">
             {[FaWhatsapp, FaInstagram, FaFacebookF, FaLinkedinIn].map((Icon, i) => (
               <a
                 key={i}
@@ -69,7 +70,7 @@ export default function Footer() {
                 <Icon />
               </a>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 

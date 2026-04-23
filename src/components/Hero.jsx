@@ -1,31 +1,64 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { HiArrowRight } from 'react-icons/hi2'
 import { FaPlay } from 'react-icons/fa'
 
 export default function Hero() {
+  const [videoReady, setVideoReady] = useState(false)
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
-      {/* Background video + fallback image */}
+      {/* Cinematic background video */}
       <div className="absolute inset-0">
-        <video
+        {/* Fallback image under the video (shows until video is ready) */}
+        <img
+          src="/images/image1y.jpeg"
+          alt=""
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <motion.video
           autoPlay
           loop
           muted
           playsInline
-          poster="/images/hero/poster.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
+          preload="auto"
+          poster="/images/image1y.jpeg"
+          onCanPlay={() => setVideoReady(true)}
+          initial={{ scale: 1.08, opacity: 0 }}
+          animate={{
+            scale: videoReady ? 1 : 1.08,
+            opacity: videoReady ? 1 : 0,
+          }}
+          transition={{
+            opacity: { duration: 1.4, ease: 'easeOut' },
+            scale: { duration: 18, ease: 'linear' },
+          }}
+          className="absolute inset-0 w-full h-full object-cover will-change-transform"
+          style={{ filter: 'saturate(1.05) contrast(1.05) brightness(0.92)' }}
         >
-          <source src="/videos/hero.mp4" type="video/mp4" />
-        </video>
-        <img
-          src="/images/hero/poster.jpg"
-          alt=""
-          onError={(e) => { e.currentTarget.style.display = 'none' }}
-          className="absolute inset-0 w-full h-full object-cover -z-10"
+          <source src="/videos/video3.mp4" type="video/mp4" />
+        </motion.video>
+
+        {/* Layered cinematic overlays for readability + depth */}
+        {/* 1. Dark base gradient — left to right so text side is richer */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-900/90 via-ink-900/60 to-ink-900/30" />
+        {/* 2. Bottom-up fade for scroll transition */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-900 via-ink-900/40 to-transparent" />
+        {/* 3. Warm gold highlight from top-right (brand accent) */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(223,165,52,0.18),transparent_55%)]" />
+        {/* 4. Vignette for cinematic framing */}
+        <div className="absolute inset-0 shadow-[inset_0_0_200px_60px_rgba(10,9,11,0.9)] pointer-events-none" />
+        {/* 5. Subtle film grain */}
+        <div
+          className="absolute inset-0 opacity-[0.06] mix-blend-overlay pointer-events-none"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>\")",
+          }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-ink-900 via-ink-900/85 to-ink-900/60" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(200,135,30,0.15),transparent_60%)]" />
       </div>
 
       <div className="container-x relative z-10 grid lg:grid-cols-12 gap-12 items-center py-20">
@@ -45,7 +78,7 @@ export default function Hero() {
           </h1>
           <p className="mt-7 max-w-xl text-ink-100 text-base md:text-lg leading-relaxed">
             Kasab Embroideries crafts intricate, couture-grade embroidery for the world's
-            leading fashion brands. Powered by 28-head precision machinery and decades of
+            leading fashion brands and decades of
             master craftsmanship.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
@@ -68,8 +101,8 @@ export default function Hero() {
         >
           {[
             { k: '15+', v: 'Years crafting' },
-            { k: '28', v: 'Heads running' },
-            { k: '100K+', v: 'Pieces / month' },
+            // { k: '28', v: 'Heads running' },
+            // { k: '100K+', v: 'Pieces / month' },
             { k: '50+', v: 'Brand partners' },
           ].map((s, i) => (
             <motion.div

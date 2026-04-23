@@ -49,19 +49,19 @@ export default function Contact() {
               <FaMapMarkerAlt className="text-2xl text-gold-400 mb-4" />
               <h4 className="font-display text-lg text-white mb-2">Factory & Head Office</h4>
               <p className="text-sm text-ink-200 leading-relaxed">
-                Industrial Area, Faisalabad<br />Punjab, Pakistan
+                Industrial Gajjumatta Area, Lahore<br />Punjab, Pakistan
               </p>
             </div>
 
             <div className="card">
               <FaPhoneAlt className="text-2xl text-gold-400 mb-4" />
               <h4 className="font-display text-lg text-white mb-2">Call Us</h4>
-              <a href="tel:+923000000000" className="text-sm text-ink-200 hover:text-gold-300 block">+92 300 000 0000</a>
-              <a href="tel:+924100000000" className="text-sm text-ink-200 hover:text-gold-300 block">+92 41 000 0000</a>
+              <a href="tel:+923000000000" className="text-sm text-ink-200 hover:text-gold-300 block">+92 30 822 25565</a>
+              <a href="tel:+924100000000" className="text-sm text-ink-200 hover:text-gold-300 block">+92 31 984 06207</a>
             </div>
 
             <a
-              href="https://wa.me/923000000000"
+              href="https://wa.me/923082225565"
               target="_blank"
               rel="noreferrer"
               className="card flex items-center gap-4 hover:border-gold-400/60 group"
@@ -79,15 +79,15 @@ export default function Contact() {
             <div className="card">
               <FaEnvelope className="text-2xl text-gold-400 mb-4" />
               <h4 className="font-display text-lg text-white mb-2">Email</h4>
-              <a href="mailto:info@kasabembroideries.com" className="text-sm text-ink-200 hover:text-gold-300 block">info@kasabembroideries.com</a>
-              <a href="mailto:sales@kasabembroideries.com" className="text-sm text-ink-200 hover:text-gold-300 block">sales@kasabembroideries.com</a>
+              <a href="mailto:info@kasabembroideries.com" className="text-sm text-ink-200 hover:text-gold-300 block">kasabembroideries@gmail.com</a>
+              {/* <a href="mailto:sales@kasabembroideries.com" className="text-sm text-ink-200 hover:text-gold-300 block">sales@kasabembroideries.com</a> */}
             </div>
 
             <div className="card">
               <FaClock className="text-2xl text-gold-400 mb-4" />
               <h4 className="font-display text-lg text-white mb-2">Working Hours</h4>
               <p className="text-sm text-ink-200 leading-relaxed">
-                Mon — Sat : 9:00 AM – 7:00 PM<br />Production runs 24/7
+                Mon — Sun : 9:00 AM – 12:00 AM<br />Production runs 24/7
               </p>
             </div>
           </motion.aside>
@@ -119,10 +119,10 @@ export default function Contact() {
                 <option value="">Select a service</option>
                 <option>Aari Embroidery</option>
                 <option>Multi-Head Embroidery</option>
-                <option>Sequin Embroidery</option>
-                <option>Double Sequin</option>
-                <option>28-Head Production</option>
-                <option>Custom Design / Digitizing</option>
+                <option>Single Sequence Embroidery</option>
+                <option>Double Sequence</option>
+                <option>Laser Embroidery</option>
+                <option>Aari Sequence Embroidery</option>
                 <option>Other</option>
               </select>
             </div>
@@ -168,7 +168,7 @@ export default function Contact() {
           <div className="aspect-[16/7] rounded-3xl overflow-hidden border border-white/10">
             <iframe
               title="Kasab Embroideries location"
-              src="https://www.google.com/maps?q=Faisalabad,Pakistan&output=embed"
+              src="https://www.google.com/maps?q=Lahore,Pakistan&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(0.6) contrast(1.1) invert(0.88)' }}

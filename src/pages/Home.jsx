@@ -39,17 +39,22 @@ export default function Home() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-ink-700">
-              <img
-                src="/images/about/factory-1.jpg"
-                alt="Kasab factory floor"
-                onError={(e) => { e.currentTarget.style.display = 'none' }}
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-ink-700 relative">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                poster="/images/about/factory-1.jpg"
                 className="w-full h-full object-cover"
-              />
+              >
+                <source src="/videos/video1.mp4" type="video/mp4" />
+              </video>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-900/40 to-transparent pointer-events-none" />
             </div>
             <div className="absolute -bottom-8 -right-4 lg:-right-10 w-52 h-52 rounded-3xl overflow-hidden border-8 border-ink-900 shadow-soft hidden md:block">
               <img
-                src="/images/about/detail-1.jpg"
+                src="/images/image1y.jpeg"
                 alt="Detail work"
                 onError={(e) => { e.currentTarget.style.display = 'none' }}
                 className="w-full h-full object-cover"
