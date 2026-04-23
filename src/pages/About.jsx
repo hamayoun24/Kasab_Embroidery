@@ -1,0 +1,173 @@
+import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
+import PageHeader from '../components/PageHeader'
+import SectionHeading from '../components/SectionHeading'
+import ClientsMarquee from '../components/ClientsMarquee'
+import WhatsAppFloat from '../components/WhatsAppFloat'
+import { stats } from '../data/services'
+import { HiArrowRight } from 'react-icons/hi2'
+import { FaAward, FaCogs, FaHandSparkles, FaLeaf } from 'react-icons/fa'
+
+const values = [
+  { icon: FaAward, title: 'Heritage Craft', desc: 'Generations of master embroiderers passing technique to apprentice — the human touch behind every stitch.' },
+  { icon: FaCogs, title: 'Precision Machinery', desc: 'Modern 28-head, sequin, and double-sequin systems tuned for high-density, high-accuracy output.' },
+  { icon: FaHandSparkles, title: 'Couture Finish', desc: 'Every piece passes through rigorous QC — because our clients\' labels deserve nothing less.' },
+  { icon: FaLeaf, title: 'Responsible Production', desc: 'Fair working conditions, ethical sourcing of threads and beads, minimal waste workflows.' },
+]
+
+export default function About() {
+  return (
+    <>
+      <PageHeader
+        eyebrow="About Kasab"
+        title="A house built on thread, time, and trust."
+        description="Kasab Embroideries began as a small atelier in Faisalabad and has grown into one of South Asia's most trusted embroidery manufacturers — serving the region's leading fashion houses without losing the craft that started it all."
+        breadcrumbs={[{ label: 'Home', to: '/' }, { label: 'About' }]}
+      />
+
+      {/* Story */}
+      <section className="section pt-0">
+        <div className="container-x grid lg:grid-cols-2 gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="aspect-[4/5] rounded-3xl overflow-hidden bg-ink-700 relative">
+              <img
+                src="/images/about/factory-2.jpg"
+                alt="Kasab atelier"
+                onError={(e) => { e.currentTarget.style.display = 'none' }}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-900/60 to-transparent" />
+            </div>
+          </motion.div>
+
+          <div>
+            <div className="eyebrow mb-4">Our Story</div>
+            <h2 className="sub-heading text-white">Built stitch by stitch, over fifteen years.</h2>
+            <div className="mt-6 space-y-5 text-ink-200 leading-relaxed">
+              <p>
+                What began with a single embroidery head and a handful of artisans has
+                grown into a multi-floor production facility running 28-head machines
+                around the clock — yet the philosophy hasn't changed: every piece that
+                leaves our floor is treated as couture.
+              </p>
+              <p>
+                We partner with design teams the way a tailor partners with a client —
+                listening first, sampling patiently, and refining until the embellishment
+                is an extension of the garment, not an addition to it.
+              </p>
+              <p>
+                Today, our work lives on the runways of Lahore, the shelves of Karachi,
+                and the wardrobes of brides and collectors around the world.
+              </p>
+            </div>
+
+            <div className="mt-10 grid grid-cols-2 gap-6">
+              {stats.map((s) => (
+                <div key={s.label} className="border-l-2 border-gold-400 pl-4">
+                  <div className="font-display text-3xl text-white">{s.value}</div>
+                  <div className="text-xs text-ink-200 uppercase tracking-widest mt-1">{s.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="section bg-ink-800/30 border-y border-white/5">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="What we stand for"
+            title="The principles behind every piece"
+            description="These four ideas are non-negotiable. They shape hiring, machinery choices, sampling standards, and the way we treat every partner."
+            center
+          />
+          <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {values.map((v, i) => (
+              <motion.div
+                key={v.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="card"
+              >
+                <v.icon className="text-3xl text-gold-400 mb-5" />
+                <h4 className="font-display text-xl text-white mb-3">{v.title}</h4>
+                <p className="text-sm text-ink-200 leading-relaxed">{v.desc}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Capabilities */}
+      <section className="section">
+        <div className="container-x grid lg:grid-cols-2 gap-16 items-center">
+          <div className="order-2 lg:order-1">
+            <div className="eyebrow mb-4">Capabilities</div>
+            <h2 className="sub-heading text-white">Scale when you need it. Nuance when you don't.</h2>
+            <p className="mt-6 text-ink-200 leading-relaxed">
+              Our facility can absorb seasonal peaks — a full retail collection, thousands
+              of units per style — while still dedicating a dedicated floor to single-piece
+              couture and bridal sampling. You get consistency at volume and care at detail.
+            </p>
+            <ul className="mt-8 space-y-4">
+              {[
+                'Production capacity: 100,000+ embroidered pieces per month',
+                'Sampling turnaround: 48-72 hours on standard artwork',
+                'Fabric handling: silks, chiffons, organzas, denim, knits',
+                'In-house digitizing, color matching, and QC teams',
+              ].map((t) => (
+                <li key={t} className="flex items-start gap-3 text-ink-100">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-gold-400 shrink-0" />
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <Link to="/services" className="btn-primary mt-10 text-sm">
+              See our services <HiArrowRight />
+            </Link>
+          </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="order-1 lg:order-2 grid grid-cols-2 gap-4"
+          >
+            <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700">
+              <img src="/images/about/capability-1.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700 mt-8">
+              <img src="/images/about/capability-2.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700">
+              <img src="/images/about/capability-3.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+            </div>
+            <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700 mt-8">
+              <img src="/images/about/capability-4.jpg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Clients */}
+      <section className="py-20 bg-ink-800/30 border-y border-white/5">
+        <div className="container-x">
+          <p className="text-center text-xs uppercase tracking-[0.3em] text-ink-300 mb-8">
+            Proud to partner with
+          </p>
+          <ClientsMarquee />
+        </div>
+      </section>
+
+      <WhatsAppFloat />
+    </>
+  )
+}
