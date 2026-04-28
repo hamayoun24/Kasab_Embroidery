@@ -177,7 +177,7 @@ export default function Home() {
                 <Link to="/contact" className="btn bg-ink-900 text-white hover:bg-ink-800">
                   Request a Quote <HiArrowRight />
                 </Link>
-                <a href="https://wa.me/923000000000" target="_blank" rel="noreferrer" className="btn border border-ink-900 text-ink-900 hover:bg-ink-900 hover:text-white">
+                <a href="https://wa.me/923082225565" target="_blank" rel="noreferrer" className="btn border border-ink-900 text-ink-900 hover:bg-ink-900 hover:text-white">
                   WhatsApp Us
                 </a>
               </div>

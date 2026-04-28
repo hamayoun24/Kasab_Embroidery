@@ -27,7 +27,7 @@ export const services = [
       'Precision sequin embroidery adds shimmer and dimension to garments. From subtle accents to bold statement pieces, our machines handle a wide range of sequin sizes and densities.',
     icon: 'sequin',
     highlights: ['Sequence size', 'Pattern-matched placement', 'Durable fixing'],
-    image: '/images/sequence.jpeg',
+    image: '/images/single.jpeg',
   },
   {
     slug: 'double-sequin',
@@ -57,7 +57,7 @@ export const services = [
       'Our in-house design and digitizing team translates your concept into production-ready embroidery files, with sampling support and color-matching.',
     icon: 'custom',
     highlights: ['Digitizing & sampling', 'Thread color matching', 'Designer collaboration'],
-    image: '/images/image1y.jpeg',
+    image: '/images/as.jpeg',
   },
 ]
 

@@ -56,8 +56,8 @@ export default function Contact() {
             <div className="card">
               <FaPhoneAlt className="text-2xl text-gold-400 mb-4" />
               <h4 className="font-display text-lg text-white mb-2">Call Us</h4>
-              <a href="tel:+923000000000" className="text-sm text-ink-200 hover:text-gold-300 block">+92 30 822 25565</a>
-              <a href="tel:+924100000000" className="text-sm text-ink-200 hover:text-gold-300 block">+92 31 984 06207</a>
+              <a href="tel:+923082225565" className="text-sm text-ink-200 hover:text-gold-300 block">+92 30 822 25565</a>
+              <a href="tel:+923198406207" className="text-sm text-ink-200 hover:text-gold-300 block">+92 31 984 06207</a>
             </div>
 
             <a
@@ -79,7 +79,7 @@ export default function Contact() {
             <div className="card">
               <FaEnvelope className="text-2xl text-gold-400 mb-4" />
               <h4 className="font-display text-lg text-white mb-2">Email</h4>
-              <a href="mailto:info@kasabembroideries.com" className="text-sm text-ink-200 hover:text-gold-300 block">kasabembroideries@gmail.com</a>
+              <a href="mailto:kasabemb94@gmail.com" className="text-sm text-ink-200 hover:text-gold-300 block">kasabemb94@gmail.com</a>
               {/* <a href="mailto:sales@kasabembroideries.com" className="text-sm text-ink-200 hover:text-gold-300 block">sales@kasabembroideries.com</a> */}
             </div>
 

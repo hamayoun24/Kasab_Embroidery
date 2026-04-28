@@ -15,6 +15,12 @@ const values = [
   { icon: FaLeaf, title: 'Responsible Production', desc: 'Fair working conditions, ethical sourcing of threads and beads, minimal waste workflows.' },
 ]
 
+const leadership = [
+  { name: 'Hafiz Ali Mushtaq', role: 'Chief Executive Officer', initials: 'HA' },
+  { name: 'Ahsan Mushtaq', role: 'Chief Technology Officer', initials: 'AM' },
+  { name: 'Zeeshan Mushtaq', role: 'Chief Operating Officer', initials: 'ZM' },
+]
+
 export default function About() {
   return (
     <>
@@ -151,9 +157,39 @@ export default function About() {
               <img src="/images/image1y.jpeg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
             </div>
             <div className="aspect-square rounded-2xl overflow-hidden bg-ink-700 mt-8">
-              <img src="/images/laser.jpeg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
+              <img src="/images/single.jpeg" alt="" onError={(e) => { e.currentTarget.style.display = 'none' }} className="w-full h-full object-cover" />
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Leadership */}
+      <section className="section bg-ink-800/30 border-y border-white/5">
+        <div className="container-x">
+          <SectionHeading
+            eyebrow="Leadership"
+            title="The people steering the house"
+            description="A family-led team combining executive vision, technical depth, and operational rigor."
+            center
+          />
+          <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {leadership.map((person, i) => (
+              <motion.div
+                key={person.name}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="card text-center"
+              >
+                <div className="mx-auto w-24 h-24 rounded-full bg-gradient-to-br from-gold-400/20 to-gold-400/5 border border-gold-400/30 flex items-center justify-center mb-5">
+                  <span className="font-display text-2xl text-gold-400">{person.initials}</span>
+                </div>
+                <h4 className="font-display text-xl text-white mb-2">{person.name}</h4>
+                <div className="text-xs text-gold-400 uppercase tracking-widest">{person.role}</div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

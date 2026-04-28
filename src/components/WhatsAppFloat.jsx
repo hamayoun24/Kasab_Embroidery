@@ -1,6 +1,6 @@
 import { FaWhatsapp } from 'react-icons/fa'
 
-export default function WhatsAppFloat({ phone = '923000000000' }) {
+export default function WhatsAppFloat({ phone = '923082225565' }) {
   return (
     <a
       href={`https://wa.me/${phone}`}
