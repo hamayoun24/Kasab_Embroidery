@@ -16,9 +16,7 @@ const values = [
 ]
 
 const leadership = [
-  { name: 'Hafiz Ali Mushtaq', role: 'Chief Executive Officer', initials: 'HA' },
-  { name: 'Ahsan Mushtaq', role: 'Chief Technology Officer', initials: 'AM' },
-  { name: 'Zeeshan Mushtaq', role: 'Chief Operating Officer', initials: 'ZM' },
+  { name: 'Haji Mushtaq Ahmed', role: 'Chief Executive Officer', initials: 'HM' },
 ]
 
 export default function About() {
@@ -172,7 +170,7 @@ export default function About() {
             description="A family-led team combining executive vision, technical depth, and operational rigor."
             center
           />
-          <div className="mt-16 grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="mt-16 grid gap-6 max-w-sm mx-auto">
             {leadership.map((person, i) => (
               <motion.div
                 key={person.name}
